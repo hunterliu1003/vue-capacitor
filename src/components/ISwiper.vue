@@ -1,21 +1,20 @@
 <template>
   <h1 style="padding-top: 24px">Swiperjs: render 10000 slides within 10000 divs</h1>
-  <swiper :modules="[Virtual]" :virtual="true">
+  <swiper :modules="[Virtual, Keyboard]" :virtual="true" :keyboard="true">
     <swiper-slide v-for="i in 10000" :key="i">
-      <div>
+      <ISlide>
         <div v-for="j in 10000">
           Slide {{ i }} + {{ j }}
         </div>
-      </div>
+      </ISlide>
     </swiper-slide>
   </swiper>
 </template>
 
 <script setup lang="ts">
-// Import Swiper Vue.js components
-import { Swiper as SwiperInstance, Virtual } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Virtual, Keyboard } from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import ISlide from './ISlide.vue'
 
-// Import Swiper styles
-import 'swiper/css';
+import 'swiper/css'
 </script>
