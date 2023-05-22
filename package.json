@@ -4,7 +4,8 @@
   "scripts": {
     "build": "vue-tsc --noEmit && vite build",
     "dev": "vite",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "cap:sync": "cap copy ios"
   },
   "dependencies": {
     "@capacitor/android": "3.5.1",

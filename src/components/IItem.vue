@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 
-const show = ref(false)
+const show = ref(true)
 onMounted(() => {
   show.value = true
 })
